@@ -1,5 +1,7 @@
+##Retreive the data needed for each plot, did not want to copy and paste this..
 getdata <- function(){
-    
+
+    ## retreive the data needed for the plots
     library(data.table)
     directory <- "D:\\_coursera\\ExData_Plotting1"
     

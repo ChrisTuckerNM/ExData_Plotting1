@@ -1,24 +1,20 @@
-plot1 <- function(jpg=TRUE) {
+plot1 <- function() {
     library(data.table)
     directory <- "D:\\_coursera\\ExData_Plotting1"
     setwd(directory)
     
     source("./getdata.R")
-    
     DT <- getdata()
-    
-    if(jpg==TRUE){
-        ## plot to the jpg device
-        jpeg("./plot1.jpg")
-    }
-    
-    hist(DT$Global_active_power,col="red",xlab = "Global Active Power (kilowatts)",main = "Global Active Power")
-    
-    if(jpg==TRUE){
-        ## plot to the jpg device
-        dev.off()
-    }
-    
    
+    png(filename = "./plot1.png")
+    
+    with(DT, {
+        hist(Global_active_power
+             ,col="red"
+             ,xlab = "Global Active Power (kilowatts)"
+             ,main = "Global Active Power")
+    })
+    
+    dev.off()
     
 }

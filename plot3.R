@@ -10,11 +10,7 @@ plot3 <- function(jpg=TRUE,box=TRUE) {
     source("./getdata.R")
     
     DT <- getdata()
-   
-    if(jpg==TRUE){
-        ## plot to the jpg device
-        jpeg("./plot3.jpg")
-    }
+    png("./plot3.png")
     
     plot(x = DT$Date,
          y=DT$Sub_metering_1,
@@ -41,10 +37,6 @@ plot3 <- function(jpg=TRUE,box=TRUE) {
     
     legend("topright",legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),col = c("black","red","blue"),lty=1 )
     
-    
-    if(jpg==TRUE){
-        ## plot to the jpg device
-        dev.off()
-    }
+    dev.off()
     
 }
