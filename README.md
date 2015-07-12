@@ -1,3 +1,9 @@
+## Notes for persons peer reviewing
+Be sure to understand that I chose to create a file called getdata.R so that I wouldn't have to copy and paste the retreival code.  DT<- getdata() retrieves the Data Table used by all plots.  setting the working directory and sourcing the file is the only thing that is copy/pasted then.  This follows the software engineering patter/rule called DRY  Don't Tepeat Yourself.
+
+Thanks
+
+## Assignment ->>>>
 ## Introduction
 
 This assignment uses data from
